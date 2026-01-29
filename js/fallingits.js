@@ -101,7 +101,7 @@ const data = {
 
 
 //Determine season (Augest - november = fall, december - febuary = winter, March - may = spring, june - july = summer)
-const currentSeason = 'winter';  // Set current season here (change as needed)
+const currentSeason = 'spring';  // Set current season here (change as needed)
 const seasonData = data.seasons[currentSeason];
 const globalSettings = data.global_settings;
 

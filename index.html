@@ -13,86 +13,202 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Your Site Name">
   <link rel="stylesheet" href="./css/structurestyle.css">
-  <link rel="stylesheet" href="./css/fallingits.css">
+  <link rel="stylesheet" href="./css/carousel.css">
   <script src="./js/fallingits.js" defer></script>
   <script src="./js/structurestyle.js" defer></script>
 </head>
 
-<!-- look up meta propeties for facebook tags and finish -->
-
 <body>
+    <!-- this is for the header logo and nav menu align=center-->
+     <!--logo banner-->
+    <div class="hero">
 
-    <div class="hero">this is for the header logo and menu 
+        <nav class="info" > <!--make into buttons *mess figure out where it to have it on page-->
+            <ul style="list-style-type: none">
+                <li><a href="#about" class="nav-button">About</a></li>
+                <li><a href="#services" class="nav-button">Services</a></li>
+                <li><a href="#contact" class="nav-button">Contact</a></li>
+                <li><a href="#testimonials" class="nav-button">Testimonies</a></li>
+            </ul>
+        </nav>
 
-            <nav class="info" >
-      <ul style="list-style-type: none">
-        <a href="#contact"><btn class="button">Contact</btn></a>
+    <header class="header"> 
+        <!-- logo with link to facebook img src=align:center make sticky stretch accross screen and link to FB-->
+        <!--banner-->
+        <div class="header-text">
+            <a href="https://www.facebook.com" target="_blank" rel="none"></a>
+                <img src="./public/logos/naileditclogo.jpg" width="12%" alt="logo">
+            </a>
+            <!-- mission statrement align:center -->
+                <h2>Washington's best renovations. If choosing a contractor has you spiraling and getting a quote feels like solving a riddle, breathe. You've arrived at the right place. We handle fast, flexible renovations for whatever life throws at your home from water damage, porch upgrades, or that "how did this even happen?" situation you don't want to talk about. We always nail it, even if you say screw it!</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- make sticky for page with logo *mess-->
+    <nav class="info">
+      <ul style="list-style-type: none">        <!--Does myFunction() belongs in JS file?-->
+        <a href="#contact"><btn class="button" onclick="myFunction()">Contact</btn></a>
       </ul>
     </nav>
 
-    </div>
-
-
-
-    <div class="about">About- This is the place where you would talk about who and what you are... Experience, reputation, specialties along with engaging content to hook your client into contacting you. --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    </div>
-    
-    <header class="header">
-        <div class="header-text">
-            <h1 alt="best renovation in washington">Nailed it</h1>
-            <div class="sellerhd">
-            <img src="./public/logos/owner.jpg" width="25%" alt="owner">
-            <h2>Washington’s best renovations—seriously, the others can stop trying. If choosing a contractor has you spiraling and getting a quote feels like solving a riddle, breathe. You’ve arrived at the right place. We handle fast, flexible renovations for whatever life throws at your home from water damage, porch upgrades, or that ‘how did this even happen?’ situation you don’t want to talk about. We always nail it, even if you say screw it!</h2>
-            </div>
-        </div>
+        <!--<h3>Nailed it renovations</h3>i dont think this is nessacary with a logo banner or maybe swap them in order with -->
 
     </header>
 
-    
-
     <main>
-        <p>
-            <div class="contact" id="contact">this tis for the form and how to contact 
+    
+    <!-- about title section align:center "who is nailed it renovations"-->
+    <!-- container About picture img src align:left About body align:right -->    
+    <div class="about" id="about">
+        <h2>Who is Nailed It Renovations?</h2>
+        <div class="about-container">
+            <div class="about-image"><img src="/public/logos/owner.jpg" alt="Adam Kinnaman"></div>
+            <div class="about-text">
+                <p>Nailed It Renovations is a contracting and subcontracting business. It was founded by Adam Kinnaman roughly four years ago with a clear purpose: to build a dependable business that allowed flexibility for family life while delivering quality workmanship to the local community.</p>
+                
+                <p>Adam has spent much of his life working odd jobs after school and throughout his career, steadily building practical, hands-on experience across a wide range of projects. Over time, those skills and work ethic helped him establish a loyal and consistent clientele.</p>
+                
+                <p>As the business grew, so did its reputation for reliability, adaptability, and honest craftsmanship. Today, Nailed It Renovations serves the Kitsap, Washington area with a focus on quality renovations, strong client relationships, and a balanced approach that supports both professional standards and personal life.</p>
             </div>
-        </p>
-        <center>
-        <div class="carousel">
+        </div>    
+    </div>
 
-            <div class="carousel-items fade">
-                <div class="numbertext"></div>
-                    <img src="./public/exmppics/livingroom1wide.jpg" alt="" style="width:50%">
-                <div class="text"></div>
+        <!-- services containers  made left to right bullut points on right-->
+         <div class="services" id="servives">
+            <h2>What ever you needs your home will need!!!</h2>
+            <div class="services-container">
+                <div class="services-list">
+                    <ul>
+                        <li><b>Drywall</b> - Mold remitigation, patch work, painting and texturing</li>
+                        <li><b>Framing</b> - New and old builds, remodeling</li>
+                        <li><b>Flooring</b> - Tile work, Hard wood, laminate</li>
+                        <li><b>Outdoor</b> - Decks, patios, gazebos, landscaping</li>
+                        <li><b>Roofing and Siding</b> - Patch work, water mitigation, insulation</li>
+                        <li><b>General Contracting</b> - Complete renovation projects from start to finish</li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="carousel-items fade">
-                <div class="numbertext"></div>
-                    <img src="./public/exmppics/bathroom1tub.jpg" alt="" style="width:50%">
-                <div class="text"></div>
-            </div>
-
-            <div class="carousel-items fade">
-                <div class="numbertext"></div>
-                    <img src="./public/exmppics/kitchen1wide1.jpg" alt="" style="width:50%">
-                <div class="text"></div>
-            </div>
-                    <a class="prev" onclick="plusSlides(-1)"></a>
-                    <a class="next" onclick="plusSlides(1)"></a>
         </div>
+
+         <!-- form container align:center (format form) make a box to frame in content -->
+        <div class="contact" id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-info-box">
+                <div class="contact-details">
+                    <p><b>Email</b><br>
+                    adam@naileditrenovations.llc</p>
+
+                    <p><b>Phone</b><br>
+                    <a href="sms:+13608241850?body=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20your%20renovation%20services." class="phone-link">(360) 824-1850</a></p>
+
+                    <p><b>Address</b>
+                    Silverdale, WA, United States, 98366</p>
+                </div>
+
+                <div class="contact-form-box">
+                    <h3>Send me a message!</h3>
+                    <form action="server" id="usrform" method="post">                            
+                        <label for="name">Name</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        
+                        <label for="phone">Phone number:</label><br>
+                        <input type="tel" id="phone" name="phone" placeholder="876-5309"><br>
+                    
+                        <label for="comment">Message:</label><br>
+                        <textarea id="comment" rows="4" cols="50" name="comment" form="usrform" required>Enter text here...</textarea><br>
+
+                    <input type="submit" class="button" value="submit">
+                </form>
+            </div>    
+        </div>
+        
+
+        <div class="container">
+            <!--testimonial container align:center slides left to right Combine carrosels--> 
+        <div class="testimonials" id="testimonials">
+            <h2>Testimonials</h2>    
+            <div class="carousel"> <!--make tent areas grey with white letters; rounded corners; -->   
+                <div class="carousel-items fade">
+                    <!--img src="./public/testomonials/billreview.png" alt="We needed a small job done in our home.  We found Nailed It Renovations and are so glad we did.  Adam was professional and competent.  He completed the work with great skill and attention to detail.  He was courteous and ensured he understood our expectations exactly before he commenced work.  We could not be happier with the results!  We plan to use him for all our future remodeling and home repair needs. ~Bill"--> 
+                        <div class="text">"We needed a small job done in our home.  We found Nailed It Renovations and are so glad we did.  Adam was professional and competent.  He completed the work with great skill and attention to detail.  He was courteous and ensured he understood our expectations exactly before he commenced work.  We could not be happier with the results!  We plan to use him for all our future remodeling and home repair needs. ~Bill"</div>
+                </div>
+
+                <div class="carousel-items fade">
+                    <img src="./public/exmppics/livingroom1wide.jpg" alt="Living room renovation example">
+                </div>
+
+                <div class="carousel-items fade">
+                    <!--img src="./public/testomonials/regima.png" alt="Great, professional service done at a fair price! I will be using again. ~Regime"-->
+                        <div class="text">"Great, professional service done at a fair price! I will be using again. ~Regime"</div>
+                </div>
+
+                <div class="carousel-items fade">
+                    <img src="./public/exmppics/bathroom1tub.jpg" alt="Bathroom renovation example">
+                </div>
+
+                <div class="carousel-items fade">
+                    <!--img src="./public/testomonials/shannon2nopic.png" alt="We are remodeling our outdated basement and the room needed a lot of repairs done. Nailed it Renovations fixed an existing window that was leaking and had water damage and also repaired an entire wall and ceiling with new drywall/texture. The end result looked beautiful and we are beyond happy with their work! It's always hard to find good, reliable contractors, and Adam was great at communication and went above and beyond to make sure the work was done right and up to our standards. I cannot recommend this company enough! ~Shannon"-->
+                        <div class="text">"We are remodeling our outdated basement and the room needed a lot of repairs done. Nailed it Renovations fixed an existing window that was leaking and had water damage and also repaired an entire wall and ceiling with new drywall/texture. The end result looked beautiful and we are beyond happy with their work! It's always hard to find good, reliable contractors, and Adam was great at communication and went above and beyond to make sure the work was done right and up to our standards. I cannot recommend this company enough! ~Shannon"</div>
+                </div>
+
+                <div class="carousel-items fade">
+                    <img src="./public/exmppics/kitchen1wide1.jpg" alt="Kitchen renovation example">
+                </div>
+
+                <div class="carousel-items fade">
+                    <!--img src="./public/testomonials/sonja.png" alt="Adam worked on updating my garage so it could be fitted with an electric door.  His work was top notch!  He arrived promptly, communicated well and....he cleaned up his work area so nicely that I think it was cleaner than when he entered!  Most impressively, the frame I thought I needed made when I originally contacted him turned out not to be the frame I really needed.  Adam just rolled with it and I couldn't be happier with how it looks.  Awesome work! ~Sonja"-->
+                        <div class="text">"Adam worked on updating my garage so it could be fitted with an electric door.  His work was top notch!  He arrived promptly, communicated well and....he cleaned up his work area so nicely that I think it was cleaner than when he entered!  Most impressively, the frame I thought I needed made when I originally contacted him turned out not to be the frame I really needed.  Adam just rolled with it and I couldn't be happier with how it looks.  Awesome work! ~Sonja"</div>
+                </div>
+
+                <div class="carousel-items fade">
+                    <!--img src="./public/testomonials/richerd.png" alt="We recently purchased a home in Bremerton and had Adam do a bunch of odds and ends as well as a major master bath and upstairs level flooring renovation. Adam did amazing quality work and always responded to our messages quickly. He even would let us know daily when he was on his way to our place to start work. Not only did Adam do quality work, he directly told us his goal was to get the job done as soon as possible so we could get back to enjoying our new home. He was super considerate that we were displaced to sleeping in our downstairs living area while the project was underway, and completed the job as quickly as he could. Adam is not just a skilled contractor, but he is also a quality person. He especially won us over by how he cared for our pets as he worked. I can't say enough about Adam. We will always go to Adam for our future home projects. I don't think we could ever find anyone better. Thank you Adam for all your hard work in making our new home a happy and cozy home. ~Richerd"-->
+                        <div class="text">"We recently purchased a home in Bremerton and had Adam do a bunch of odds and ends as well as a major master bath and upstairs level flooring renovation. Adam did amazing quality work and always responded to our messages quickly. He even would let us know daily when he was on his way to our place to start work. Not only did Adam do quality work, he directly told us his goal was to get the job done as soon as possible so we could get back to enjoying our new home. He was super considerate that we were displaced to sleeping in our downstairs living area while the project was underway, and completed the job as quickly as he could. Adam is not just a skilled contractor, but he is also a quality person. He especially won us over by how he cared for our pets as he worked. I can't say enough about Adam. We will always go to Adam for our future home projects. I don't think we could ever find anyone better. Thank you Adam for all your hard work in making our new home a happy and cozy home. ~Richerd"</div>
+                </div>
+
+                <!--Seems like it should be in JS file-->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        
+        <!--removed,I didnt place the in the right spot-->
+        <!--/div-->
+        <!--/div-->
+
         <br>
         <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <!--Should this be in JS file?-->
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+            </div>
         </div>
-        </center>
-
-        <div class="testimonials"> This is where people have said your shit looks good.
         </div>
+                <img src="./public/logos/naileditclogo.jpg" width="12%" alt="logo">
+        
 
     </main>
 
-    <footer>
-        <div class="footer-social"> this is where this stuff like "Awards Certificates mentionables" go
+    <footer> <!-- footer align:center-->
+
+        <div class="footer-content">
+            <div class="footer-social"> 
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <img src="./public/social favicon/fbfavicon.svg" alt="Nailed it Facebook">
+                </a>
+            </div>
+            <div class="footer-info">
+                <p>Services area: Silverdale, WA · Bremerton, WA · Gig Harbor, WA · Port Orchard, WA</p>
+                <p>Nailed It Renovations LLC 3136 Beechcrest Ct SE Port Orchard Washington 98366</p>
+                <p>License Number: NAILEIR7870G UBI: 604-947-969</p>
+                <p>Business address: Silverdale, WA, United States, 98366</p>
+                <p>Email: adam@naileditrenovations.llc | Phone: (360) 824-1850</p>
+            </div>
         </div>
     </footer>
 </body>
