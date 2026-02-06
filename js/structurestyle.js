@@ -4,14 +4,70 @@
 let slideIndex = 1;
 showSlides();
 
-//Initialize carousel on page
+function setMobileNavState(isOpen) {
+    const header = document.querySelector('.header');
+    const toggle = document.querySelector('.menu-toggle');
+    if (!header || !toggle) return;
+    header.classList.toggle('nav-open', isOpen);
+    toggle.classList.toggle('active', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
+function closeMobileNav() {
+    setMobileNavState(false);
+}
+
+function toggleMobileNav() {
+    const toggle = document.querySelector('.menu-toggle');
+    if (!toggle) return;
+    const currentlyExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    setMobileNavState(!currentlyExpanded);
+}
+
+//Initialize carousel and helpers on page
 document.addEventListener('DOMContentLoaded', function() {
     showSlides(slideIndex);
-    
+
     // Auto-advance slides every 5 seconds
     setInterval(function() {
         plusSlides(1);
     }, 5000);
+
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && href !== '') {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+            closeMobileNav();
+        });
+    });
+
+    const toggle = document.querySelector('.menu-toggle');
+    if (toggle) {
+        toggle.addEventListener('click', function() {
+            toggleMobileNav();
+        });
+    }
+
+    document.addEventListener('click', function(event) {
+        const header = document.querySelector('.header');
+        const nav = document.querySelector('.info');
+        const toggleButton = document.querySelector('.menu-toggle');
+        if (!header || !nav || !toggleButton) return;
+
+        if (header.classList.contains('nav-open')) {
+            const isClickInsideNav = nav.contains(event.target) || toggleButton.contains(event.target);
+            if (!isClickInsideNav) {
+                closeMobileNav();
+            }
+        }
+    });
 });
 
 // Next/previous controls
@@ -90,23 +146,3 @@ function myFunction() {
 }
 
 
-/**OLD BUTTON CODE I MOVED IN TO FILE BLINDLY
- button onclick="myFunction();
-
-  Smooth scrolling for all anchor links**/
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('a[href^="#"]');
-    
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href !== '#' && href !== '') {
-                const target = document.querySelector(href);
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }
-        });
-    });
-});
