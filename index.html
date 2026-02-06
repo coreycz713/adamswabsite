@@ -14,6 +14,7 @@
   <meta property="og:site_name" content="Nailed it renovations">
   <link rel="stylesheet" href="./css/structurestyle.css">
   <link rel="stylesheet" href="./css/carousel.css">
+  <link rel="stylesheet" href="./css/mobile.css">
   <!-- <script src="./js/fallingits.js" defer></script> -->
   <script src="./js/structurestyle.js" defer></script>
   <script src="./js/form.js" defer></script>
@@ -23,7 +24,13 @@
     <!-- this is for the header logo and nav menu align=center-->
      <!--logo banner-->
     <div class="header">
-        <nav class="info">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="info" id="main-nav">
             <ul style="list-style-type: none">
                 <li><a href="#about" class="nav-button">About</a></li>
                 <li><a href="#services" class="nav-button">Services</a></li>
@@ -54,7 +61,7 @@
             </ul>
         </nav>
     
-        <!--<h3>Nailed it renovations</h3>i dont think this is nessacary with a logo banner or maybe swap them in order with -->
+        <!--<h3>Nailed it renovations</h3>I don't think this is necessary with a logo banner or maybe swap them in order with -->
     
     </header>
 
