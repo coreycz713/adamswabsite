@@ -17,6 +17,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Wrapped bare `<button>` inside `<li>` for valid list markup
 - Fixed malformed CSS comments (`*comment` -> `/* comment */`) in `.button`, `.button:hover`, and `.button:active` rules
 
+2/6/2026
+-fixed mobile view
+forms scaling
+
 ### Changed
 - Made `<nav class="info">` sticky with `position: sticky; top: 0; z-index: 1000`
 - Restructured header/hero/nav HTML for correct document outline and nesting
@@ -27,3 +31,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 -Made top logo bigger from 15% to 30%
 -Added ned Header h1 text for mission statement 
 -added placeholders for the form
+
+2/6/2026
+-logos added pictures added mobile featues and css
